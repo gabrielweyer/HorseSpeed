@@ -1,0 +1,19 @@
+# Rider
+
+.idea/
+
+# Build detritus
+
+bin/
+obj/
+
+# Cake
+
+tools/*
+!tools/packages.config
+artifacts/
+
+# Visual Studio
+
+.vs/
+*.csproj.user
