@@ -45,7 +45,7 @@ namespace HorseSpeed.Runner
                     Console.WriteLine();
                 }
 
-                Console.WriteLine($"Processing time: {watch.Elapsed}");
+                Console.WriteLine($"Processing time: {Math.Round(watch.Elapsed.TotalMilliseconds)} ms");
             }
             catch (Exception ex)
             {
@@ -87,9 +87,10 @@ namespace HorseSpeed.Runner
 
         private static void DisplayMetrics(Metrics metrics)
         {
-            Console.WriteLine($"Mean: {metrics.Mean} ms");
+            Console.WriteLine($"Mean: {Math.Round(metrics.Mean)} ms");
             Console.WriteLine($"Median: {metrics.Median} ms");
-            Console.WriteLine($"Population standard deviation: {metrics.PopulationStandardDeviation} ms");
+            Console.WriteLine($"Population standard deviation: {Math.Round(metrics.PopulationStandardDeviation)} ms");
+            Console.WriteLine();
 
             foreach (var percentiles in metrics.Percentiles)
             {
